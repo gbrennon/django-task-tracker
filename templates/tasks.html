@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Tasks</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="Title" required>
+    <input type="text" name="description" placeholder="Description" required>
+    <input type="checkbox" name="done"> Done
+    <button type="submit">Create Task</button>
+</form>
+{% for task in tasks %}
+<div style="margin: 10px 0; padding: 10px; border: 1px solid #444;">
+    <strong>{{ task.title }}</strong> - {{ task.description }}
+    <input type="checkbox" {% if task.done %}checked{% endif %} disabled>
+</div>
+{% endfor %}
+{% endblock %}
