@@ -1,0 +1,3 @@
+- Read all files inside `docs/`
+- This is a python django project
+- At the end of the task write another md file inside `docs/` followin this name style: <task_number>_<task_description>.md, improve README.md, commit and push
