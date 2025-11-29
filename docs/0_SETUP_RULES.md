@@ -1,0 +1,3 @@
+- This is a uv django project
+- Use type hints in method arguments and return
+- At the end of the task write a md file inside `docs` dir. It name should be <task_number>_<task_definition>.md and then you should commit and push code
